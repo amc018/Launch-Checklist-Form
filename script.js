@@ -45,7 +45,9 @@ window.addEventListener("load", function() {
          event.preventDefault();
          document.getElementById("faultyItems").style.visibility = "hidden";
 
-      } else if (!isNaN(Number(pilotNameInput.value)) || !isNaN(Number(coPilotNameInput.value)) || typeof Number(fuelLevelInput.value) !== "number" || typeof Number(cargoMassInput.value) !== "number" ) {
+      //} else if (!isNaN(Number(pilotNameInput.value)) || !isNaN(Number(coPilotNameInput.value)) || typeof Number(fuelLevelInput.value) != "number" || typeof Number(cargoMassInput.value) != "number" ) {
+      } else if (!isNaN(Number(pilotNameInput.value)) || !isNaN(Number(coPilotNameInput.value)) || isNaN(Number(fuelLevelInput.value)) || isNaN(Number(cargoMassInput.value))) {
+
          alert("Make sure to enter valid information for each field!");
          event.preventDefault();
          document.getElementById("faultyItems").style.visibility = "hidden";
